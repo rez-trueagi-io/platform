@@ -1,5 +1,5 @@
 
-# Coq Platform 2022.09.0 providing Coq 8.15.2 (released Jun 2022) with a beta package pick for the 2022.09 release.
+# Coq Platform 2022.09.1 providing Coq 8.15.2 (released Jun 2022) with an updated package pick from Sep 2022
 
 The [Coq proof assistant](https://coq.inria.fr) provides a formal language
 to write mathematical definitions, executable algorithms, and theorems, together
@@ -9,10 +9,10 @@ The [Coq Platform](https://github.com/coq/platform) is a distribution of the Coq
 interactive prover together with a selection of Coq libraries and plugins.
 
 The Coq Platform supports to install several versions of Coq (also in parallel).
-This README file is for **Coq Platform 2022.09.0 with Coq 8.15.2**.
+This README file is for **Coq Platform 2022.09.1 with Coq 8.15.2**.
 The README files for other versions are linked in the main [README](https://github.com/coq/platform/blob/main/README.md).
 
-This version of Coq Platform 2022.09.0 includes Coq 8.15.2 from Sep 2022. This is beta release with complete package pick and intended for package maintainers and early adopters. 
+This version of Coq Platform 2022.09.1 includes Coq 8.15.2 from Sep 2022. There are two package picks for Coq 8.15.2: the original from 04/2022, and an updated/extended one from 09/2022. This is the latest package pick for Coq 8.15.2 with some package updates with the goal to make it as compatible as possible to the Coq 8.16.1 package pick. 
 
 The OCaml version used is 4.13.1+options ocaml-option-flambda.
 
@@ -40,13 +40,13 @@ It could mean that parts of the software use one license while other parts use a
 It could also mean that you can choose between the given licenses.
 Please clarify the details with the homepage of the package.
 
-**Note:** The package list is also available as [CSV](https://github.com/coq/platform/tree/main/doc/PackageTable~8.15~2022.09~beta1.csv).
+**Note:** The package list is also available as [CSV](https://github.com/coq/platform/tree/main/doc/PackageTable~8.15~2022.09.csv).
 
 **Note:** Click on the triangle to show additional information for a package!
 
 <br>
 
-## **Coq Platform 2022.09.0 with Coq 8.15.2 "base level"**
+## **Coq Platform 2022.09.1 with Coq 8.15.2 "base level"**
 
 The **base level** is mostly intended as a basis for custom installations using
 opam and contains the following package(s):
@@ -98,7 +98,7 @@ opam and contains the following package(s):
 
 <br>
 
-## **Coq Platform 2022.09.0 with Coq 8.15.2 "IDE level"**
+## **Coq Platform 2022.09.1 with Coq 8.15.2 "IDE level"**
 
 The **IDE level** adds an interactive development environment to the **base level**.
 
@@ -126,7 +126,7 @@ The **IDE level** contains the following package(s):
 
 <br>
 
-## **Coq Platform 2022.09.0 with Coq 8.15.2 "full level"**
+## **Coq Platform 2022.09.1 with Coq 8.15.2 "full level"**
 
 The **full level** adds many commonly used coq libraries, plug-ins and
 developments.
@@ -385,7 +385,7 @@ The **full level** contains the following packages:
     <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/BSD-2-Clause.html" target="_blank">BSD-2-Clause</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='http://homotopytypetheory.org/'>homepage</a>)
-      (<a href='https://github.com/HoTT/HoTT/issues'>bug reports</a>)
+      (<a href='https://github.com/HoTT/Coq-HoTT/issues'>bug reports</a>)
       (<a href='https://coq.inria.fr/opam/released/packages/coq-hott/coq-hott.8.15/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd>To use the HoTT library, the following flags must be passed to coqc:<br>   -noinit -indices-matter<br>To use the HoTT library in a project, add the following to _CoqProject:<br>   -arg -noinit<br>   -arg -indices-matter</dd>
@@ -877,7 +877,7 @@ The **full level** contains the following packages:
 (20220210) An LR(1) parser generator</summary>
   <dl>
     <dt><b>authors</b></dt><dd>François Pottier &lt;francois.pottier@inria.fr&gt; - Yann Régis-Gianas &lt;yrg@pps.univ-paris-diderot.fr&gt;</dd>
-    <dt><b>license</b></dt><dd> LGPL-2.0-only with OCaml-LGPL-linking-exception - see <a href="http://gitlab.inria.fr/fpottier/menhir" target="_blank">homepage</a> for details</dd>
+    <dt><b>license</b></dt><dd> LGPL-2.0-only WITH OCaml-LGPL-linking-exception - see <a href="http://gitlab.inria.fr/fpottier/menhir" target="_blank">homepage</a> for details</dd>
     <dt><b>links</b></dt><dd>
       (<a href='http://gitlab.inria.fr/fpottier/menhir'>homepage</a>)
       (<a href='https://gitlab.inria.fr/fpottier/menhir/-/issues'>bug reports</a>)
@@ -949,7 +949,7 @@ The **full level** contains the following packages:
 
 <br>
 
-## **Coq Platform 2022.09.0 with Coq 8.15.2 "optional packages"**
+## **Coq Platform 2022.09.1 with Coq 8.15.2 "optional packages"**
 
 The **optional** packages have the same maturity and maintenance level as the
 packages in the full level, but either take a rather long time to build or have
@@ -993,15 +993,15 @@ The following packages are **optional**:
 </details>
 
 <details>
-  <summary><a href='http://vst.cs.princeton.edu/'>coq-vst.2.11</a>
-(2.11) Verified Software Toolchain</summary>
+  <summary><a href='http://vst.cs.princeton.edu/'>coq-vst.2.11.1</a>
+(2.11.1) Verified Software Toolchain</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Andrew W. Appel - Lennart Beringer - Josiah Dodds - Qinxiang Cao - Aquinas Hobor - Gordon Stewart - Qinshi Wang - Sandrine Blazy - Santiago Cuellar - Robert Dockins - Nick Giannarakis - Samuel Gruetter - Jean-Marie Madiot</dd>
-    <dt><b>license</b></dt><dd> <a href="https://raw.githubusercontent.com/PrincetonUniversity/VST/master/LICENSE" target="_blank">link</a></dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/BSD-2-Clause.html" target="_blank">BSD-2-Clause</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='http://vst.cs.princeton.edu/'>homepage</a>)
       (<a href='https://github.com/PrincetonUniversity/VST/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-vst/coq-vst.2.11/opam'>opam package</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-vst/coq-vst.2.11.1/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd>The software toolchain includes static analyzers to check assertions about your program; optimizing compilers to translate your program to machine language; operating systems and libraries to supply context for your program. The Verified Software Toolchain project assures with machine-checked proofs that the assertions claimed at the top of the toolchain really hold in the machine-language program, running in the operating-system context.</dd>
   </dl>
@@ -1009,7 +1009,7 @@ The following packages are **optional**:
 
 <br>
 
-## **Coq Platform 2022.09.0 with Coq 8.15.2 "extended level"**
+## **Coq Platform 2022.09.1 with Coq 8.15.2 "extended level"**
 
 The **extended level** contains packages which are in a beta stage or otherwise
 don't yet have the level of maturity or support required for inclusion in the
@@ -1024,32 +1024,32 @@ The Windows installer also includes them, and they are selected by default.
 The **extended level** contains the following packages:
 
 <details>
-  <summary><a href='https://github.com/mit-plv/bedrock2'>coq-bedrock2-compiler.0.0.3</a>
-(0.0.3) A work-in-progress language and compiler for verified low-level programming (compiler part)</summary>
+  <summary><a href='https://github.com/mit-plv/bedrock2'>coq-bedrock2-compiler.0.0.4</a>
+(0.0.4) A work-in-progress language and compiler for verified low-level programming (compiler part)</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology Kevix SiFive</dd>
     <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/mit-plv/bedrock2'>homepage</a>)
       (<a href='https://github.com/mit-plv/bedrock2/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-bedrock2-compiler/coq-bedrock2-compiler.0.0.3/opam'>opam package</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-bedrock2-compiler/coq-bedrock2-compiler.0.0.4/opam'>opam package</a>)
     </dd>
-    <dt><b>description</b></dt><dd>bedrock2 is a low-level systems programming language. This language is<br>equipped with a simple program logic for proving correctness of the<br>programs.  This package includes a verified compiler targeting RISC-V<br>from this language.<br><br>The project has similar goals as bedrock, but uses a different design.<br>No code is shared between bedrock and bedrock2.<br><br>The source language is a C-like language called ExprImp. It is an<br>imperative language with expressions. Currently, the only data type<br>is word (32-bit or 64-bit), and the memory is a partial map from words<br>to bytes. Records are supported as a notation for memory access with an offset.</dd>
+    <dt><b>description</b></dt><dd>bedrock2 is a low-level systems programming language. This language is<br>equipped with a simple program logic for proving correctness of the<br>programs.  This package includes a verified compiler targeting RISC-V<br>from this language.<br><br>The project has similar goals as bedrock, but uses a different design.<br>No code is shared between bedrock and bedrock2.</dd>
   </dl>
 </details>
 
 <details>
-  <summary><a href='https://github.com/mit-plv/bedrock2'>coq-bedrock2.0.0.3</a>
-(0.0.3) A work-in-progress language and compiler for verified low-level programming</summary>
+  <summary><a href='https://github.com/mit-plv/bedrock2'>coq-bedrock2.0.0.4</a>
+(0.0.4) A work-in-progress language and compiler for verified low-level programming</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology Kevix SiFive</dd>
     <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/mit-plv/bedrock2'>homepage</a>)
       (<a href='https://github.com/mit-plv/bedrock2/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-bedrock2/coq-bedrock2.0.0.3/opam'>opam package</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-bedrock2/coq-bedrock2.0.0.4/opam'>opam package</a>)
     </dd>
-    <dt><b>description</b></dt><dd>bedrock2 is a low-level systems programming language. This language is<br>equipped with a simple program logic for proving correctness of the<br>programs.  A verified compiler targeting RISC-V from this language<br>exists in the coq-bedrock2-compiler package on opam.<br><br>The project has similar goals as bedrock, but uses a different design.<br>No code is shared between bedrock and bedrock2.<br><br>The source language is a C-like language called ExprImp. It is an<br>imperative language with expressions. Currently, the only data type<br>is word (32-bit or 64-bit), and the memory is a partial map from words<br>to bytes. Records are supported as a notation for memory access with an offset.</dd>
+    <dt><b>description</b></dt><dd>bedrock2 is a low-level systems programming language. This language is<br>equipped with a simple program logic for proving correctness of the<br>programs.  A verified compiler targeting RISC-V from this language<br>exists in the coq-bedrock2-compiler package on opam.<br><br>The project has similar goals as bedrock, but uses a different design.<br>No code is shared between bedrock and bedrock2.</dd>
   </dl>
 </details>
 
@@ -1099,15 +1099,15 @@ The **extended level** contains the following packages:
 </details>
 
 <details>
-  <summary><a href='https://github.com/mit-plv/fiat-crypto'>coq-fiat-crypto.0.0.15</a>
-(0.0.15) Cryptographic Primitive Code Generation by Fiat</summary>
+  <summary><a href='https://github.com/mit-plv/fiat-crypto'>coq-fiat-crypto.0.0.17</a>
+(0.0.17) Cryptographic Primitive Code Generation by Fiat</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Andres Erbsen &lt;andreser@mit.edu&gt; - Google Inc. - Jade Philipoom &lt;jadep@mit.edu&gt; &lt;jade.philipoom@gmail.com&gt; - Massachusetts Institute of Technology - Zoe Paraskevopoulou &lt;zoe.paraskevopoulou@gmail.com&gt;</dd>
     <dt><b>license</b></dt><dd> MIT OR Apache-2.0 OR BSD-1-Clause - see <a href="https://github.com/mit-plv/fiat-crypto" target="_blank">homepage</a> for details</dd>
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/mit-plv/fiat-crypto'>homepage</a>)
       (<a href='https://github.com/mit-plv/fiat-crypto/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-fiat-crypto/coq-fiat-crypto.0.0.15/opam'>opam package</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-fiat-crypto/coq-fiat-crypto.0.0.17/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd>Coq code and proofs for a command-line binary that can synthesize proven-correct<br>big-integer modular field arithmetic operations for cryptography.<br>Target languages include C, Rust, Zig, Go, and bedrock2.</dd>
   </dl>
@@ -1167,37 +1167,37 @@ The **extended level** contains the following packages:
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/mit-plv/rewriter'>homepage</a>)
       (<a href='https://github.com/mit-plv/rewriter/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-rewriter/coq-rewriter.0.0.6/opam'>opam package</a>)
+      (<a href='https://github.com/coq/platform/tree/main/opam/opam-coq-archive/released/packages/coq-rewriter/coq-rewriter.0.0.6/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd></dd>
   </dl>
 </details>
 
 <details>
-  <summary><a href='https://github.com/mit-plv/riscv-coq'>coq-riscv.0.0.2</a>
-(0.0.2) RISC-V Specification in Coq, somewhat experimental</summary>
+  <summary><a href='https://github.com/mit-plv/riscv-coq'>coq-riscv.0.0.3</a>
+(0.0.3) RISC-V Specification in Coq, somewhat experimental</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Massachusetts Institute of Technology</dd>
     <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/BSD-3-Clause.html" target="_blank">BSD-3-Clause</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/mit-plv/riscv-coq'>homepage</a>)
       (<a href='https://github.com/mit-plv/riscv-coq/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-riscv/coq-riscv.0.0.2/opam'>opam package</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-riscv/coq-riscv.0.0.3/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd></dd>
   </dl>
 </details>
 
 <details>
-  <summary><a href='https://github.com/mit-plv/rupicola'>coq-rupicola.0.0.5</a>
-(0.0.5) Gallina to imperative code compilation, currently in design phase</summary>
+  <summary><a href='https://github.com/mit-plv/rupicola'>coq-rupicola.0.0.6</a>
+(0.0.6) Gallina to imperative code compilation, currently in design phase</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Clément Pit-Claudel &lt;clement.pitclaudel@live.com&gt; - Jade Philipoom - Dustin Jamner - Andres Erbsen - Adam Chlipala</dd>
     <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/MIT.html" target="_blank">MIT</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/mit-plv/rupicola'>homepage</a>)
       (<a href='https://github.com/mit-plv/rupicola/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-rupicola/coq-rupicola.0.0.5/opam'>opam package</a>)
+      (<a href='https://coq.inria.fr/opam/released/packages/coq-rupicola/coq-rupicola.0.0.6/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd></dd>
   </dl>
@@ -1295,6 +1295,21 @@ Please refer to the linked opam package and/or your system package manager for d
       (<a href='https://opam.ocaml.org/packages/cairo2/cairo2.0.6.4/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd>This is a binding to Cairo, a 2D graphics library with support for<br>multiple output devices. Currently supported output targets include<br>the X Window System, Quartz, Win32, image buffers, PostScript, PDF,<br>and SVG file output.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/ocaml/camlp-streams'>camlp-streams.5.0.1</a>
+(5.0.1) The Stream and Genlex libraries for use with Camlp4 and Camlp5</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Daniel de Rauglaudre Xavier Leroy</dd>
+    <dt><b>license</b></dt><dd> LGPL-2.1-only WITH OCaml-LGPL-linking-exception - see <a href="https://github.com/ocaml/camlp-streams" target="_blank">homepage</a> for details</dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/ocaml/camlp-streams'>homepage</a>)
+      (<a href='https://github.com/ocaml/camlp-streams/issues'>bug reports</a>)
+      (<a href='https://opam.ocaml.org/packages/camlp-streams/camlp-streams.5.0.1/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>This package provides two library modules:<br>- Stream: imperative streams, with in-place update and memoization<br>  of the latest element produced.<br>- Genlex: a small parameterized lexical analyzer producing streams<br>  of tokens from streams of characters.<br><br>The two modules are designed for use with Camlp4 and Camlp5:<br>- The stream patterns and stream expressions of Camlp4/Camlp5 consume<br>  and produce data of type &apos;a Stream.t.<br>- The Genlex tokenizer can be used as a simple lexical analyzer for<br>  Camlp4/Camlp5-generated parsers.<br><br>The Stream module can also be used by hand-written recursive-descent<br>parsers, but is not very convenient for this purpose.<br><br>The Stream and Genlex modules have been part of the OCaml standard library<br>for a long time, and have been distributed as part of the core OCaml system.<br>They will be removed from the OCaml standard library at some future point,<br>but will be maintained and distributed separately in this camlpstreams package.</dd>
   </dl>
 </details>
 
@@ -1667,7 +1682,7 @@ Please refer to the linked opam package and/or your system package manager for d
     <dt><b>links</b></dt><dd>
       (<a href='https://metacoq.github.io/metacoq'>homepage</a>)
       (<a href='https://github.com/MetaCoq/metacoq/issues'>bug reports</a>)
-      (<a href='https://coq.inria.fr/opam/released/packages/coq-metacoq-template/coq-metacoq-template.1.1+8.15/opam'>opam package</a>)
+      (<a href='https://github.com/coq/platform/tree/main/opam/opam-coq-archive/released/packages/coq-metacoq-template/coq-metacoq-template.1.1+8.15/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd>MetaCoq is a meta-programming framework for Coq.<br><br>Template Coq is a quoting library for Coq. It takes Coq terms and<br>constructs a representation of their syntax tree as a Coq inductive data<br>type. The representation is based on the kernel&apos;s term representation.<br><br>In addition to a complete reification and denotation of CIC terms,<br>Template Coq includes:<br><br>- Reification of the environment structures, for constant and inductive declarations.<br>- Denotation of terms and global declarations<br>- A monad for manipulating global declarations, calling the type<br>  checker, and inserting them in the global environment, in the style of<br>  MetaCoq/MTac.</dd>
   </dl>
@@ -1693,7 +1708,7 @@ Please refer to the linked opam package and/or your system package manager for d
 (2.11) A list library indexed by Z type, with a powerful automatic solver</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Qinshi Wang Andrew W. Appel</dd>
-    <dt><b>license</b></dt><dd> <a href="https://raw.githubusercontent.com/PrincetonUniversity/VST/master/LICENSE" target="_blank">link</a></dd>
+    <dt><b>license</b></dt><dd> <a href="https://spdx.org/licenses/BSD-2-Clause.html" target="_blank">BSD-2-Clause</a></dd>
     <dt><b>links</b></dt><dd>
       (<a href='http://vst.cs.princeton.edu/'>homepage</a>)
       (<a href='https://github.com/PrincetonUniversity/VST/issues'>bug reports</a>)
@@ -1764,30 +1779,30 @@ Please refer to the linked opam package and/or your system package manager for d
 </details>
 
 <details>
-  <summary><a href='https://github.com/garrigue/lablgtk'>lablgtk3-sourceview3.3.1.2</a>
-(3.1.2) OCaml interface to GTK+ gtksourceview library</summary>
-  <dl>
-    <dt><b>authors</b></dt><dd>Jacques Garrigue et al., Nagoya University</dd>
-    <dt><b>license</b></dt><dd> LGPL with linking exception - see <a href="https://github.com/garrigue/lablgtk" target="_blank">homepage</a> for details</dd>
-    <dt><b>links</b></dt><dd>
-      (<a href='https://github.com/garrigue/lablgtk'>homepage</a>)
-      (<a href='https://github.com/garrigue/lablgtk/issues'>bug reports</a>)
-      (<a href='https://opam.ocaml.org/packages/lablgtk3-sourceview3/lablgtk3-sourceview3.3.1.2/opam'>opam package</a>)
-    </dd>
-    <dt><b>description</b></dt><dd>OCaml interface to GTK+3, gtksourceview3 library.<br><br>See https://garrigue.github.io/lablgtk/ for more information.</dd>
-  </dl>
-</details>
-
-<details>
-  <summary><a href='https://github.com/garrigue/lablgtk'>lablgtk3.3.1.2</a>
-(3.1.2) OCaml interface to GTK+3</summary>
+  <summary><a href='https://github.com/garrigue/lablgtk'>lablgtk3-sourceview3.3.1.3</a>
+(3.1.3) OCaml interface to GTK+ gtksourceview library</summary>
   <dl>
     <dt><b>authors</b></dt><dd>Jacques Garrigue et al., Nagoya University</dd>
     <dt><b>license</b></dt><dd> LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception - see <a href="https://github.com/garrigue/lablgtk" target="_blank">homepage</a> for details</dd>
     <dt><b>links</b></dt><dd>
       (<a href='https://github.com/garrigue/lablgtk'>homepage</a>)
       (<a href='https://github.com/garrigue/lablgtk/issues'>bug reports</a>)
-      (<a href='https://opam.ocaml.org/packages/lablgtk3/lablgtk3.3.1.2/opam'>opam package</a>)
+      (<a href='https://opam.ocaml.org/packages/lablgtk3-sourceview3/lablgtk3-sourceview3.3.1.3/opam'>opam package</a>)
+    </dd>
+    <dt><b>description</b></dt><dd>OCaml interface to GTK+3, gtksourceview3 library.<br><br>See https://garrigue.github.io/lablgtk/ for more information.</dd>
+  </dl>
+</details>
+
+<details>
+  <summary><a href='https://github.com/garrigue/lablgtk'>lablgtk3.3.1.3</a>
+(3.1.3) OCaml interface to GTK+3</summary>
+  <dl>
+    <dt><b>authors</b></dt><dd>Jacques Garrigue et al., Nagoya University</dd>
+    <dt><b>license</b></dt><dd> LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception - see <a href="https://github.com/garrigue/lablgtk" target="_blank">homepage</a> for details</dd>
+    <dt><b>links</b></dt><dd>
+      (<a href='https://github.com/garrigue/lablgtk'>homepage</a>)
+      (<a href='https://github.com/garrigue/lablgtk/issues'>bug reports</a>)
+      (<a href='https://github.com/coq/platform/tree/main/opam/opam-repository/packages/lablgtk3/lablgtk3.3.1.3/opam'>opam package</a>)
     </dd>
     <dt><b>description</b></dt><dd>OCaml interface to GTK+3<br><br>See https://garrigue.github.io/lablgtk/ for more information.</dd>
   </dl>
@@ -1798,7 +1813,7 @@ Please refer to the linked opam package and/or your system package manager for d
 (20220210) Runtime support library for parsers generated by Menhir</summary>
   <dl>
     <dt><b>authors</b></dt><dd>François Pottier &lt;francois.pottier@inria.fr&gt; - Yann Régis-Gianas &lt;yrg@pps.univ-paris-diderot.fr&gt;</dd>
-    <dt><b>license</b></dt><dd> LGPL-2.0-only with OCaml-LGPL-linking-exception - see <a href="http://gitlab.inria.fr/fpottier/menhir" target="_blank">homepage</a> for details</dd>
+    <dt><b>license</b></dt><dd> LGPL-2.0-only WITH OCaml-LGPL-linking-exception - see <a href="http://gitlab.inria.fr/fpottier/menhir" target="_blank">homepage</a> for details</dd>
     <dt><b>links</b></dt><dd>
       (<a href='http://gitlab.inria.fr/fpottier/menhir'>homepage</a>)
       (<a href='https://gitlab.inria.fr/fpottier/menhir/-/issues'>bug reports</a>)
@@ -1813,7 +1828,7 @@ Please refer to the linked opam package and/or your system package manager for d
 (20220210) Compile-time library for auxiliary tools related to Menhir</summary>
   <dl>
     <dt><b>authors</b></dt><dd>François Pottier &lt;francois.pottier@inria.fr&gt; - Yann Régis-Gianas &lt;yrg@pps.univ-paris-diderot.fr&gt;</dd>
-    <dt><b>license</b></dt><dd> LGPL-2.0-only with OCaml-LGPL-linking-exception - see <a href="http://gitlab.inria.fr/fpottier/menhir" target="_blank">homepage</a> for details</dd>
+    <dt><b>license</b></dt><dd> LGPL-2.0-only WITH OCaml-LGPL-linking-exception - see <a href="http://gitlab.inria.fr/fpottier/menhir" target="_blank">homepage</a> for details</dd>
     <dt><b>links</b></dt><dd>
       (<a href='http://gitlab.inria.fr/fpottier/menhir'>homepage</a>)
       (<a href='https://gitlab.inria.fr/fpottier/menhir/-/issues'>bug reports</a>)

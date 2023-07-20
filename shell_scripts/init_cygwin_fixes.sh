@@ -15,7 +15,7 @@
 
 if [[ "$OSTYPE" == cygwin ]]
 then
-  ln -s -f /usr/bin/python2 /usr/bin/python
+  ln -s -f /usr/bin/python3 /usr/bin/python
 fi
 
 ###################### Fix tar in 32 bit cygwin #####################
@@ -25,7 +25,7 @@ fi
 if [[ "$OSTYPE" == cygwin ]]
 then
   if [ "`uname -m`" = "i686" ]; then
-    wget http://mirrors.kernel.org/sourceware/cygwin/x86/release/tar/tar-1.32-2.tar.xz -O /tmp/tar-1.32-2.tar.xz
+    wget https://mirrors.kernel.org/sourceware/cygwin-archive/20221123/x86/release/tar/tar-1.32-2.tar.xz -O /tmp/tar-1.32-2.tar.xz
     tar xvf /tmp/tar-1.32-2.tar.xz -C /
   fi
 fi

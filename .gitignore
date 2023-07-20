@@ -3,6 +3,9 @@ Notes.md
 windows/README.txt
 windows_installer/
 opam64/
+opam32/
+opam64.tar.xz
+opam32.tar.xz
 cygwin_cache/
 macos_installer/
 smoke-test-kit/
@@ -12,3 +15,4 @@ source-statistics/
 maintainer_scripts/ci_package_list.sh
 maintainer_scripts/patched_package_list.sh
 WARNINGS.LOG
+Smoke-test-kit-*.zip
