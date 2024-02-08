@@ -52,8 +52,9 @@ jobs:
           - '32'
         variant:
           # Keep this in sync with the Smoke test below
-          - '8.17~2023.03+beta1'
-          - '8.16~2022.09'
+          - '8.18~2023.11'
+          - '8.18~mc2'
+          - '8.17~2023.08'
 
     steps:
       - name: Set git to use LF
@@ -62,7 +63,7 @@ jobs:
           git config --global core.eol lf
 
       - name: Git checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set PLATFORM
         if: ${{ github.event.inputs.platform != '' }}
@@ -74,21 +75,21 @@ jobs:
 
       - name: Create installer
         shell: cmd
-        run: C:\cygwin_coq_platform\bin\bash --login -c "cd platform/ && windows/create_installer_windows.sh && mkdir /cygdrive/c/installer && cp windows_installer/*exe /cygdrive/c/installer/"
+        run: C:\cygwin_coq_platform\bin\bash --login -c "cd /platform/ && windows/create_installer_windows.sh && mkdir /cygdrive/c/installer && cp windows_installer/*exe /cygdrive/c/installer/"
 
       - name: Create smoke test kit
         shell: cmd
-        run: C:\cygwin_coq_platform\bin\bash --login -c "cd platform/ && shell_scripts/create_smoke_test_kit.sh && mkdir /cygdrive/c/smoke && cp -ra smoke-test-kit/* /cygdrive/c/smoke/"
+        run: C:\cygwin_coq_platform\bin\bash --login -c "cd /platform/ && shell_scripts/create_smoke_test_kit.sh && mkdir /cygdrive/c/smoke && cp -ra smoke-test-kit/* /cygdrive/c/smoke/"
 
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: 'Windows installer ${{matrix.variant}} ${{matrix.architecture}}'
           path: C:\installer\*.exe
           retention-days: 5
 
       - name: 'Upload smoke test kit'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: 'Smoke Test Kit Windows ${{matrix.variant}} ${{matrix.architecture}}'
           path: C:\smoke\
@@ -105,18 +106,19 @@ jobs:
           - '64'
           - '32'
         variant:
-          - '8.17~2023.03+beta1'
-          - '8.16~2022.09'
+          - '8.18~2023.11'
+          - '8.18~mc2'
+          - '8.17~2023.08'
 
     steps:
       - name: 'Download Artifact'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         id: download
         with:
           name: 'Windows installer ${{matrix.variant}} ${{matrix.architecture}}'
 
       - name: 'Download smoke test kit'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         id: download-smoke
         with:
           name: 'Smoke Test Kit Windows ${{matrix.variant}} ${{matrix.architecture}}'

@@ -12,7 +12,7 @@
 
 # The two lines below are used by the package selection script
 COQ_PLATFORM_VERSION_TITLE="Coq 8.15.2 (released Jun 2022) with an updated package pick from Sep 2022"
-COQ_PLATFORM_VERSION_SORTORDER=3
+COQ_PLATFORM_VERSION_SORTORDER=102
 
 # The package list name is the final part of the opam switch name.
 # It is usually either empty ot starts with ~.
@@ -28,7 +28,7 @@ COQ_PLATFORM_COQ_TAG='8.15.2'
 COQ_PLATFORM_USE_DEV_REPOSITORY='N'
 
 # This extended descriptions is used for readme files
-COQ_PLATFORM_VERSION_DESCRIPTION='This version of Coq Platform 2022.09.1 includes Coq 8.15.2 from Sep 2022. '
+COQ_PLATFORM_VERSION_DESCRIPTION='This version of Coq Platform 2023.11.0 includes Coq 8.15.2 from Sep 2022. '
 COQ_PLATFORM_VERSION_DESCRIPTION+='There are two package picks for Coq 8.15.2: the original from 04/2022, and an updated/extended one from 09/2022. '
 COQ_PLATFORM_VERSION_DESCRIPTION+='This is the latest package pick for Coq 8.15.2 with some package updates with the goal to make it as compatible as possible to the Coq 8.16.1 package pick. '
 
@@ -50,11 +50,11 @@ PACKAGES=""
 
 # Coq needs a patched ocamlfind to be relocatable by installers
 PACKAGES="${PACKAGES} PIN.ocamlfind.1.9.5~relocatable"
-# The Coq compiler coqc and the Coq standard library
-PACKAGES="${PACKAGES} PIN.coq.8.15.2"
 # Since dune does support Coq, it is explicitly selected
 PACKAGES="${PACKAGES} dune.3.4.1"
 PACKAGES="${PACKAGES} dune-configurator.3.4.1"
+# The Coq compiler coqc and the Coq standard library
+PACKAGES="${PACKAGES} PIN.coq.8.15.2"
 
 ########## IDE PACKAGES ##########
 

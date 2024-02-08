@@ -50,12 +50,14 @@ jobs:
       fail-fast: false
       matrix:
         variant:
-          - '8.17~2023.03+beta1'
-          - '8.16~2022.09'
+          # Keep this in sync with the Smoke test below
+          - '8.18~2023.11'
+          - '8.18~mc2'
+          - '8.17~2023.08'
 
     steps:
       - name: Git checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set PLATFORM
         if: ${{ github.event.inputs.platform != '' }}
@@ -97,7 +99,7 @@ jobs:
           shell_scripts/create_smoke_test_kit.sh
 
       - name: 'Upload smoke test kit'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: 'Smoke Test Kit Macos ${{matrix.variant}}'
           path: smoke-test-kit/
@@ -110,20 +112,23 @@ jobs:
           pip3 install macpack
 
       - name: 'Build DMG installer'
-        shell: bash
-        run: |
-          eval $(opam env)
-          macos/create_installer_macos.sh
+        uses: Wandalen/wretry.action@v1.3.0
+        with:
+          attempt_limit: 5
+          attempt_delay: 5000
+          command: |
+            eval $(opam env)
+            macos/create_installer_macos.sh
 
       - name: 'Upload DMG script logs on failure'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: 'DMG script error logs ${{matrix.variant}}'
           path: macos_installer/logs/
 
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: 'Macos installer ${{matrix.variant}} x86_64'
           path: macos_installer/Coq-Platform-*.dmg
@@ -137,21 +142,22 @@ jobs:
       fail-fast: false
       matrix:
         variant:
-          - '8.17~2023.03+beta1'
-          - '8.16~2022.09'
+          - '8.18~2023.11'
+          - '8.18~mc2'
+          - '8.17~2023.08'
 
     steps:
       - name: Install bash
         run: brew install bash
 
       - name: 'Download Artifact'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         id: download
         with:
           name: 'Macos installer ${{matrix.variant}} x86_64'
 
       - name: 'Download smoke test kit'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         id: download-smoke
         with:
           name: 'Smoke Test Kit Macos ${{matrix.variant}}'
@@ -174,7 +180,9 @@ jobs:
       - name: 'Run Macos smoke test kit'
         shell: bash
         run: |
+          ls /Applications/Coq-Platform*.app
           export PATH="$PATH:$(cd /Applications/Coq-Platform*.app/Contents/Resources/bin/; pwd)"
+          export COQLIB=$(coqc -where)
           cd ${{steps.download-smoke.outputs.download-path}}
           chmod a+x ./run-smoke-test.sh
           ./run-smoke-test.sh

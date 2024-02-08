@@ -21,5 +21,5 @@ set -o errexit
 
 for pick in package_picks/package-pick-*
 do
-  maintainer_scripts/create_readme.sh -pick="${pick}"
+  maintainer_scripts/create_readme.sh -pick="${pick}" -depgraph
 done
